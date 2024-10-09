@@ -33,7 +33,7 @@ public class PlatformerMovement : MonoBehaviour
         }
        // anim.SetFloat("y", velocity.y);
        // anim.SetBool("Grounded", grounded);
-        int x = (int)Input.GetAxisRaw("Horizontal");
+        //int x = (int)Input.GetAxisRaw("Horizontal");
         //anim.SetInteger("x", x);
         /*if (x > 0)
         {
