@@ -9,7 +9,6 @@ public class PlatformerMovement : MonoBehaviour
     [SerializeField]
     float JumpSpeed = 2f;
     bool grounded = false;
-    //bool airborne = false;
     Rigidbody2D rb;
     //Animator anim;
     // Start is called before the first frame update
@@ -43,12 +42,6 @@ public class PlatformerMovement : MonoBehaviour
         {
             GetComponent <SpriteRenderer>().flipX = true;
         }*/
-       /*if (!Input.GetButton("Jump") && !grounded && airborne)
-        {
-            rb.AddForce(new Vector2(0, -100));
-            grounded = false;
-            airborne = false;
-        }*/
     }
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
@@ -69,7 +62,6 @@ public class PlatformerMovement : MonoBehaviour
         if (collision.gameObject.layer == 6)
         {
             grounded = true;
-            //airborne = true;
         }
     }
 }

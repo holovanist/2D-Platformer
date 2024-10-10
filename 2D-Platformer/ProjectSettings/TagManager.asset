@@ -7,6 +7,8 @@ TagManager:
   - PlayerBullet
   - Enemy
   - Enemy Bullet
+  - Scene Start Point 1
+  - Scene Start Point 2
   layers:
   - Default
   - TransparentFX
