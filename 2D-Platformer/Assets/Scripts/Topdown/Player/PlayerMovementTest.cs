@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementTest : MonoBehaviour
+public class PlayerMovementTopDown : MonoBehaviour
 {
     [SerializeField]
     float moveSpeed = 20f;
