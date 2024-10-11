@@ -34,4 +34,9 @@ public class PlayerSceneTransfer : MonoBehaviour
         SpawnPos = GameObject.FindGameObjectWithTag("Scene Start Point 1");
         gameObject.transform.position = SpawnPos.transform.position;
     }
+    private void OnLevelWasLoaded(int level)
+    {
+        SpawnPos = GameObject.FindGameObjectWithTag("Scene Start Point 1");
+        gameObject.transform.position = SpawnPos.transform.position;
+    }
 }
