@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Shop : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Shop : MonoBehaviour
     GameObject shop3;
     GameObject shop4;
     GameObject shop5;
+    GameObject Store;
 
     public bool LightningSpells {  get; set; }
     public bool LightningSpellsUpgrade { get; set; }
@@ -27,7 +29,7 @@ public class Shop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //GetComponent<Canvas>().enabled = false;
+        
         shop1 = GameObject.FindGameObjectWithTag("Shop 1");
         shop2 = GameObject.FindGameObjectWithTag("Shop 2");
         shop3 = GameObject.FindGameObjectWithTag("Shop 3");
@@ -87,6 +89,7 @@ public class Shop : MonoBehaviour
     }
     private void OnLevelWasLoaded(int level)
     {
+       
         if(upgradeChecker.LightningSpells == true)
         {
             LightningSpells = true;

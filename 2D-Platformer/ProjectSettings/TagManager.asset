@@ -9,6 +9,12 @@ TagManager:
   - Enemy Bullet
   - Scene Start Point 1
   - Scene Start Point 2
+  - Shop 1
+  - Shop 2
+  - Shop 3
+  - Shop 4
+  - Shop 5
+  - Store
   layers:
   - Default
   - TransparentFX
