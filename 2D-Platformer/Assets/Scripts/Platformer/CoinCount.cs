@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test2 : MonoBehaviour
+public class CoinCount : MonoBehaviour
 {
+    public int CoinAmount { get; set; }
     // Start is called before the first frame update
     void Start()
     {
