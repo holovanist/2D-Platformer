@@ -13,58 +13,57 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     float baseMaxHealth = 100f;
     [SerializeField]
-    float DamagePerFrame = 0.05f;
+    float BossDamage = 0.05f;
     [SerializeField]
-    float DamageOnContact = 1f;
+    float EnemyDamage = 1f;
     [SerializeField]
     Image healthbar;
+    float timer;
     void Start()
     {
-        //baseMaxHealth = health;
         healthbar.fillAmount = health / baseMaxHealth;
+    }
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if (health < 1f)
+        {
+            SceneManager.LoadScene(levelToLoad);
+            health = baseMaxHealth;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log(collision.gameObject.name);
-        //IF we it an enemy, reduce player hp
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && timer >= 2)
         {
-            health -= DamageOnContact;
-            healthbar.fillAmount = health / baseMaxHealth;
-            //add consequences
-            //IF health gets too low, reload the current level
-            if (health < 1f)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                //SceneManager.LoadScene(levelToLoad);
-            }
+            EnemyHit();
+        }
+        if (collision.gameObject.tag == "Boss" && timer >= 2)
+        {
+            BossHit();
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
-        {   
-            health -= DamagePerFrame;
-            healthbar.fillAmount = health / baseMaxHealth;
-            if (health < 1f)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                //SceneManager.LoadScene(levelToLoad);
-            }
+        if (collision.gameObject.tag == "Enemy" && timer >= 2)
+        {
+            EnemyHit();
         }
-        
+        if (collision.gameObject.tag == "Boss" && timer >= 2)
+        {
+            BossHit();
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && timer >= 2)
         {
-            health -= DamagePerFrame;
-            healthbar.fillAmount = health / baseMaxHealth;
-            if (health < 1f)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                //SceneManager.LoadScene(levelToLoad);
-            }
+            EnemyHit();
+        }
+        if (collision.gameObject.tag == "Boss" && timer >= 2)
+        {
+            BossHit();
         }
         if (health <= baseMaxHealth)
         {
@@ -74,35 +73,32 @@ public class PlayerHealth : MonoBehaviour
                 healthbar.fillAmount = health / baseMaxHealth;
             }
         }
-        if (collision.gameObject.tag == "Enemy Bullet")
+        if (collision.gameObject.tag == "Enemy Bullet" && timer >= 2)
         {
-            health -= DamageOnContact;
-            healthbar.fillAmount = health / baseMaxHealth;
-            if (health < 1f)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+            BossHit();
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && timer >= 2)
         {
-            health -= DamagePerFrame;
-            healthbar.fillAmount = health / baseMaxHealth;
-            if (health < 1f)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                //SceneManager.LoadScene(levelToLoad);
-            }
+            EnemyHit();
         }
-        if (health <= baseMaxHealth)    
+        if (collision.gameObject.tag == "Boss" && timer >= 2)
         {
-           if (collision.gameObject.tag == "Healing pool")
-           {
-                health += .05f;
-                healthbar.fillAmount = health / baseMaxHealth;
-            }
+            BossHit();
         }
+    }
+    public void EnemyHit()
+    {
+        health -= EnemyDamage;
+        timer = 0;
+        healthbar.fillAmount = health / baseMaxHealth;
+    }
+    public void BossHit()
+    {
+        health -= BossDamage;
+        timer = 0;
+        healthbar.fillAmount = health / baseMaxHealth;
     }
 }
