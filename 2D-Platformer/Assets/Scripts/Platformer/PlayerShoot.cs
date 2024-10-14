@@ -7,7 +7,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     GameObject prefab;
     [SerializeField]
-    float BulletSpeed = 10.0f;
+    float BulletSpeed = 1.0f;
     [SerializeField]
     float BulletLifetime = 2.0f;
     float timer = 0;
@@ -23,17 +23,26 @@ public class PlayerShoot : MonoBehaviour
             if (Input.GetButton("Fire1") && timer > ShootDelay)
             {
                 timer = 0;
-                //shoot towards the mouse cursor
-                Vector3 mousePos = Input.mousePosition;
-                mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-                mousePos.z = 0;
-                Vector3 mouseDir = mousePos - transform.position;
-                //normalize the vector so we dont have wonky speeds
-                mouseDir.Normalize();
+                if(Input.GetKeyDown(KeyCode.D))
+                {
+
+                }
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+
+                }
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+
+                }
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+
+                }
                 //spawn in the bullet
                 GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
                 //Push the bullet towards the mouse
-                bullet.GetComponent<Rigidbody2D>().velocity = mouseDir * BulletSpeed;
+                //bullet.GetComponent<Rigidbody2D>().velocity = mouseDir * BulletSpeed;
                 Destroy(bullet, BulletLifetime);
             }
         }
