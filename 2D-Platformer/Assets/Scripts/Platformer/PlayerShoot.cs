@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     float ShootDelay = 0.5f;
     float SpellDirection;
+    float xInput;
     // Update is called once per frame
     void Update()
     {
@@ -24,8 +26,16 @@ public class PlayerShoot : MonoBehaviour
             if (Input.GetButton("Fire1") && timer > ShootDelay)
             {
                 timer = 0;
-                SpellDirection = Input.GetAxisRaw("Horizontal");
+                xInput = Input.GetAxisRaw("Horizontal");
 
+                if (xInput != 0)
+                {
+
+                }
+                else
+                { 
+                    
+                }
                 //spawn in the bullet
                 GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
                 //Push the bullet towards the mouse
