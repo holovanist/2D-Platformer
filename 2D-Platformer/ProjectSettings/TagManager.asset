@@ -16,6 +16,7 @@ TagManager:
   - Shop 5
   - Store
   - Boss
+  - menu
   layers:
   - Default
   - TransparentFX

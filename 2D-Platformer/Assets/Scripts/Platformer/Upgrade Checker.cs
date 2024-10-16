@@ -11,13 +11,6 @@ public class UpgradeChecker : MonoBehaviour
     public bool MaxHealthIncrease { get; private set; }
 
     private Shop shop;
-    // Start is called before the first frame update
-    void Start()
-    {
-     
-     
-    }
-
     // Update is called once per frame
     void Update()
     {

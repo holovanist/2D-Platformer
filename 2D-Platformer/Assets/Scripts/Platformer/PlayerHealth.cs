@@ -103,4 +103,8 @@ public class PlayerHealth : MonoBehaviour
         timer = 0;
         healthbar.fillAmount = health / baseMaxHealth;
     }
+    private void OnLevelWasLoaded(int level)
+    {
+        healthbar.fillAmount = health / baseMaxHealth;
+    }
 }

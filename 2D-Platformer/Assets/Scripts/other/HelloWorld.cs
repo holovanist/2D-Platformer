@@ -12,8 +12,8 @@ public class HelloWorld : MonoBehaviour
         string name = "James";
         Debug.Log(name);
         int health = 10;
-        float critChance = 0.2f;
-        bool key = true;
+        //float critChance = 0.2f;
+        //bool key = true;
         Debug.Log("health = " + health);
         //all below subtract 1 from the value of health
         health = health - 1;

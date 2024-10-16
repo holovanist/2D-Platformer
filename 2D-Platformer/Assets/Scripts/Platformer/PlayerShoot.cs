@@ -30,17 +30,25 @@ public class PlayerShoot : MonoBehaviour
 
                 if (xInput != 0)
                 {
-
+                    if(xInput == 1)
+                    {
+                        GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
+                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0);
+                    }
                 }
                 else
                 { 
-                    
+                    if( xInput == -1)
+                    {
+                        GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
+                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0);
+                    }
                 }
                 //spawn in the bullet
-                GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
+                
                 //Push the bullet towards the mouse
                 //bullet.GetComponent<Rigidbody2D>().velocity = mouseDir * BulletSpeed;
-                Destroy(bullet, BulletLifetime);
+                //Destroy(bullet, BulletLifetime);
             }
         }
     }
