@@ -15,10 +15,20 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     float ShootDelay = 0.5f;
     float SpellDirection;
-    float xInput;
+    public float xInput;
+    int lastInput;
     // Update is called once per frame
     void Update()
     {
+        xInput = Input.GetAxisRaw("Horizontal");
+        if (xInput == 1)
+        {
+            lastInput = 1;
+        }
+        if (xInput == -1)
+        {
+            lastInput = -1;
+        }
         if (Time.timeScale ==1)
         {
             timer += Time.deltaTime; //0.016667 = 60fps
@@ -26,29 +36,34 @@ public class PlayerShoot : MonoBehaviour
             if (Input.GetButton("Fire1") && timer > ShootDelay)
             {
                 timer = 0;
-                xInput = Input.GetAxisRaw("Horizontal");
+
 
                 if (xInput != 0)
                 {
                     if(xInput == 1)
                     {
                         GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
-                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0);
+                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0) * BulletSpeed;
+                        Destroy(bullet, BulletLifetime);
+                    }
+                    if (xInput == -1)
+                    {
+                        GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
+                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0) * BulletSpeed;
+                        Destroy(bullet, BulletLifetime);
                     }
                 }
                 else
-                { 
-                    if( xInput == -1)
-                    {
-                        GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
-                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0);
-                    }
+                {
+                    GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(lastInput, 0) * BulletSpeed;
+                    Destroy(bullet, BulletLifetime);
                 }
                 //spawn in the bullet
                 
                 //Push the bullet towards the mouse
                 //bullet.GetComponent<Rigidbody2D>().velocity = mouseDir * BulletSpeed;
-                //Destroy(bullet, BulletLifetime);
+
             }
         }
     }
