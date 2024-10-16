@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 204954081}
   - component: {fileID: 204954080}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: player HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 578120503}
   - component: {fileID: 578120502}
   m_Layer: 5
-  m_Name: Image
+  m_Name: player HP background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -813,11 +813,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelToLoad: Logan 2
-  health: 2
-  baseMaxHealth: 100
+  health: 10
+  baseMaxHealth: 10
   BossDamage: 0.05
   EnemyDamage: 1
-  healthbar: {fileID: 0}
+  healthbar: {fileID: 204954080}
+  iframes: 1
 --- !u!4 &1673974967 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1807899599091780594, guid: 6d47f1313f66c664e8fe685c1b3c3327, type: 3}
