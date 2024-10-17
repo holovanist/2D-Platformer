@@ -36,22 +36,22 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" && timer >= iframes)
+        if (collision.gameObject.CompareTag("Enemy") && timer >= iframes)
         {
             EnemyHit();
         }
-        if (collision.gameObject.tag == "Boss" && timer >= iframes)
+        if (collision.gameObject.CompareTag("Boss") && timer >= iframes)
         {
             BossHit();
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" && timer >= iframes)
+        if (collision.gameObject.CompareTag("Enemy") && timer >= iframes)
         {
             EnemyHit();
         }
-        if (collision.gameObject.tag == "Boss" && timer >= iframes)
+        if (collision.gameObject.CompareTag("Boss") && timer >= iframes)
         {
             BossHit();
         }
@@ -59,34 +59,34 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" && timer >= iframes)
+        if (collision.gameObject.CompareTag("Enemy") && timer >= iframes)
         {
             EnemyHit();
         }
-        if (collision.gameObject.tag == "Boss" && timer >= iframes)
+        if (collision.gameObject.CompareTag("Boss") && timer >= iframes)
         {
             BossHit();
         }
         if (health <= baseMaxHealth)
         {
-            if (collision.gameObject.tag == "Healing pool")
+            if (collision.gameObject.CompareTag("Heal"))
             {
                 health += 1f;
                 healthbar.fillAmount = health / baseMaxHealth;
             }
         }
-        if (collision.gameObject.tag == "Enemy Bullet" && timer >= iframes)
+        if (collision.gameObject.CompareTag("Enemy Bullet") && timer >= iframes)
         {
             BossHit();
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" && timer >= iframes)
+        if (collision.gameObject.CompareTag("Enemy") && timer >= iframes)
         {
             EnemyHit();
         }
-        if (collision.gameObject.tag == "Boss" && timer >= iframes)
+        if (collision.gameObject.CompareTag("Boss") && timer >= iframes)
         {
             BossHit();
         }

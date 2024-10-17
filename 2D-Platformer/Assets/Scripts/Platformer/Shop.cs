@@ -10,7 +10,7 @@ public class Shop : MonoBehaviour
     GameObject shop3;
     GameObject shop4;
     GameObject shop5;
-    GameObject Store;
+
 
     public bool LightningSpells {  get; set; }
     public bool LightningSpellsUpgrade { get; set; }
@@ -18,8 +18,8 @@ public class Shop : MonoBehaviour
     public bool MaxManaIncrease { get; set; }
     public bool MaxHealthIncrease { get; set; }
 
-    private CoinCount CoinCount;
-    private UpgradeChecker upgradeChecker;
+    private readonly CoinCount CoinCount;
+    private readonly UpgradeChecker UpgradeChecker;
 
     public int Cost1;
     public int Cost2;
@@ -37,12 +37,7 @@ public class Shop : MonoBehaviour
         shop5 = GameObject.FindGameObjectWithTag("Shop 5");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void purchase1()
+    public void Purchase1()
     {
         if (Cost1 <= CoinCount.CoinAmount)
         {
@@ -51,7 +46,7 @@ public class Shop : MonoBehaviour
             CoinCount.CoinAmount -= Cost1;
         }
     }
-    public void purchase2()
+    public void Purchase2()
     {
         if (Cost2 <= CoinCount.CoinAmount)
         {
@@ -60,7 +55,7 @@ public class Shop : MonoBehaviour
             CoinCount.CoinAmount -= Cost2;
         }
     }
-    public void purchase3()
+    public void Purchase3()
     {
         if (Cost3 <= CoinCount.CoinAmount)
         {
@@ -69,7 +64,7 @@ public class Shop : MonoBehaviour
             CoinCount.CoinAmount -= Cost3;
         }
     }
-    public void purchase4()
+    public void Purchase4()
     {
         if (Cost4 <= CoinCount.CoinAmount)
         {
@@ -78,7 +73,7 @@ public class Shop : MonoBehaviour
             CoinCount.CoinAmount -= Cost4;
         }
     }
-    public void purchase5()
+    public void Purchase5()
     {
         if (Cost5 <= CoinCount.CoinAmount)
         {
@@ -90,27 +85,27 @@ public class Shop : MonoBehaviour
     private void OnLevelWasLoaded(int level)
     {
        
-        if(upgradeChecker.LightningSpells == true)
+        if(UpgradeChecker.LightningSpells == true)
         {
             LightningSpells = true;
             shop1.SetActive(false);
         }
-        if (upgradeChecker.LightningSpellsUpgrade == true)
+        if (UpgradeChecker.LightningSpellsUpgrade == true)
         {
             LightningSpellsUpgrade = true;
             shop2.SetActive(false);
         }
-        if (upgradeChecker.FireballUpgrade == true)
+        if (UpgradeChecker.FireballUpgrade == true)
         {
             FireballUpgrade = true;
             shop3.SetActive(false);
         }
-        if (upgradeChecker.MaxManaIncrease == true)
+        if (UpgradeChecker.MaxManaIncrease == true)
         {
             MaxManaIncrease = true;
             shop4.SetActive(false);
         }
-        if (upgradeChecker.MaxHealthIncrease == true)
+        if (UpgradeChecker.MaxHealthIncrease == true)
         {
             MaxHealthIncrease = true;
             shop5.SetActive(false);

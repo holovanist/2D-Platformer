@@ -16,20 +16,15 @@ public class HelloWorld : MonoBehaviour
         //bool key = true;
         Debug.Log("health = " + health);
         //all below subtract 1 from the value of health
-        health = health - 1;
+        //health = health - 1;
         health -= 1;
         health--;
         Debug.Log("health = " + health);
         //all below add 1 from the value of health
-        health = health + 1;
+        //health = health + 1;
         health += 1;
         health++;
         Debug.Log("health = " + health);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

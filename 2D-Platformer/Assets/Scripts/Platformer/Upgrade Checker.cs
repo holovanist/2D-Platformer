@@ -10,7 +10,7 @@ public class UpgradeChecker : MonoBehaviour
     public bool MaxManaIncrease { get; private set; }
     public bool MaxHealthIncrease { get; private set; }
 
-    private Shop shop;
+    private readonly Shop shop;
     // Update is called once per frame
     void Update()
     {

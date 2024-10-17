@@ -24,12 +24,12 @@ public class EnemySpawn : MonoBehaviour
         timer2 += Time.deltaTime;
         if (GameObject.FindWithTag("Enemy") == true && NumberOfEnemiesSpawned < NumberOfEnemiesSpawnable)
         {
-            GameObject enemy = Instantiate(prefab, transform.position, Quaternion.identity);
+            GameObject _ = Instantiate(prefab, transform.position, Quaternion.identity);
             NumberOfEnemiesSpawned++;
         }
         else if (GameObject.FindWithTag("Enemy") == null && NumberOfEnemiesSpawned < NumberOfEnemiesSpawnable)
         {
-            GameObject enemy = Instantiate(prefab, transform.position, Quaternion.identity);
+            _ = Instantiate(prefab, transform.position, Quaternion.identity);
             NumberOfEnemiesSpawned++;
         }
         else if (GameObject.FindWithTag("Enemy") == null && NumberOfEnemiesSpawned == NumberOfEnemiesSpawnable && timer > 5f)

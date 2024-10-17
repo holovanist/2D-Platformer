@@ -9,7 +9,6 @@ public class PlayerSceneTransfer : MonoBehaviour
     GameObject SpawnPos;
     GameObject menu;
     GameObject player;
-    Component Renderer;
 
     public string levelToLoad = "Logan 2";
     public bool OriginalPlayer = false;
@@ -38,18 +37,9 @@ public class PlayerSceneTransfer : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(levelToLoad);
-            gameObject.transform.position = SpawnPos.transform.position;
-        }*/
-    }
     void Awake()
     {
-            if (tag == "Player")
+            if (CompareTag("Player"))
             {
                 DontDestroyOnLoad(this.gameObject);
             }

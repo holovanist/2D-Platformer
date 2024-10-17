@@ -56,4 +56,22 @@ public class PlayerMovement : MonoBehaviour
             IsJumping = false;
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            isgrounded = false;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            isgrounded = true;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision);
+    }
 }

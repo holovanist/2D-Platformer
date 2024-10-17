@@ -14,7 +14,6 @@ public class PlayerShoot : MonoBehaviour
     float timer = 0;
     [SerializeField]
     float ShootDelay = 0.5f;
-    float SpellDirection;
     public float xInput;
     int lastInput;
     // Update is called once per frame
