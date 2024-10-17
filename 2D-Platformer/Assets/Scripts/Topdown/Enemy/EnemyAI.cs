@@ -12,11 +12,13 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     bool goHome = true;
     Vector3 homePosition;
+    Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         homePosition = transform.position;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -30,22 +32,22 @@ public class EnemyAI : MonoBehaviour
         {
             //move towards the player
             ChaseDir.Normalize();
-            GetComponent<Rigidbody2D>().velocity = ChaseDir * chaseSpeed;
+            rb.velocity = ChaseDir * chaseSpeed;
         }
         else if (goHome)
         {
             if (homeDir.magnitude < 0.1f)
             { 
                 transform.position = homePosition;
-                GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+                rb.velocity = Vector3.zero;
             }
             homeDir.Normalize();
-            GetComponent<Rigidbody2D>().velocity = homeDir * chaseSpeed;
+            rb.velocity = homeDir * chaseSpeed;
         }
         else
         {
 
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            rb.velocity = Vector3.zero;
         }
     }
 }
