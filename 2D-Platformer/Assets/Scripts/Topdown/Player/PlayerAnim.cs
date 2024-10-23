@@ -19,6 +19,8 @@ public class PlayerAnim : MonoBehaviour
             float yInput = Input.GetAxis("Vertical");
             GetComponent<Animator>().SetFloat("x", xInput);
             GetComponent<Animator>().SetFloat("y", yInput);
-        }   
         }
+        
+       
     }
+}

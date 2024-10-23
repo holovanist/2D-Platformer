@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyPace : MonoBehaviour
 {
+
     GameObject player;
     [SerializeField]
     float chaseSpeed = 5.0f;
@@ -28,6 +29,7 @@ public class EnemyPace : MonoBehaviour
         //the chase direction is destination - enemy starting position
         Vector3 playerPosition = player.transform.position;
         Vector3 ChaseDir = playerPosition - transform.position;
+        
         if (ChaseDir.magnitude < ChaseRange)
         {
             //move towards the player
