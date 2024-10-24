@@ -70,8 +70,8 @@ public class PlayerMovement : MonoBehaviour
             isgrounded = true;
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision);
-    }
+    }*/
 }
