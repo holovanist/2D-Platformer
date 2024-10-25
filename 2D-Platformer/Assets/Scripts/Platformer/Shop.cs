@@ -29,7 +29,14 @@ public class Shop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            GetComponent<Canvas>().enabled = false;
+        }
+        else
+        {
+            GetComponent<Canvas>().enabled = true;
+        }
         shop1 = GameObject.FindGameObjectWithTag("Shop 1");
         shop2 = GameObject.FindGameObjectWithTag("Shop 2");
         shop3 = GameObject.FindGameObjectWithTag("Shop 3");
@@ -84,31 +91,13 @@ public class Shop : MonoBehaviour
     }
     private void OnLevelWasLoaded(int level)
     {
-       
-        if(UpgradeChecker.LightningSpells == true)
+        if (GameObject.FindGameObjectWithTag("Enemy"))
         {
-            LightningSpells = true;
-            shop1.SetActive(false);
+            GetComponent<Canvas>().enabled = false;
         }
-        if (UpgradeChecker.LightningSpellsUpgrade == true)
+        else
         {
-            LightningSpellsUpgrade = true;
-            shop2.SetActive(false);
-        }
-        if (UpgradeChecker.FireballUpgrade == true)
-        {
-            FireballUpgrade = true;
-            shop3.SetActive(false);
-        }
-        if (UpgradeChecker.MaxManaIncrease == true)
-        {
-            MaxManaIncrease = true;
-            shop4.SetActive(false);
-        }
-        if (UpgradeChecker.MaxHealthIncrease == true)
-        {
-            MaxHealthIncrease = true;
-            shop5.SetActive(false);
+            GetComponent<Canvas>().enabled = true;
         }
     }
 }
