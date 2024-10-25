@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 12553f848d8442b4b9a77d5057043361
+guid: fa124939e5ce5344aa9a4556135ad181
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -51,7 +51,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 0
+  alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lv2_0
+      name: LV2 part 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 64
-        height: 64
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64e881d92c0c93c49869131179ccc4d3
-      internalID: -992058298
+      spriteID: 46027f9ff3bc49048a7939a405d71121
+      internalID: 1420056203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv2_1
+      name: LV2 part 1_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
+        x: 100
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c7c30b24b8a2f84f930cc06a55bb496
-      internalID: 1465269936
+      spriteID: d3d76cc8c1ba2354d8309763107fe366
+      internalID: -359672227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv2_2
+      name: LV2 part 1_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb023ac4706c0fb449335f527685ca84
+      internalID: 1927086264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LV2 part 1_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 64
-        height: 64
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db0be01bb9be12d4ca9ac3f2bd1e3e64
-      internalID: -1242349467
+      spriteID: 956ecf212445d4840a1e8fe4acf3ff46
+      internalID: -1176629451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv2_3
+      name: LV2 part 1_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 100
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +195,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e81e28a2af65bb43a0e399a9612eb50
-      internalID: -1854018012
+      spriteID: 39d6a01d50d6ebc489cec4542f9301c9
+      internalID: -632245160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv2_4
+      name: LV2 part 1_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad7752900dd78c4aa8948c531706967
+      internalID: 682076168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LV2 part 1_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13b06c1ebb94d9040bf1961208264100
-      internalID: 1104760486
+      spriteID: 0ce3d63b86bb3e341aca822d8b5326fd
+      internalID: -112589267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lv2_5
+      name: LV2 part 1_7
       rect:
         serializedVersion: 2
-        x: 64
+        x: 100
         y: 0
-        width: 64
-        height: 64
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96466e8b52d8d4a46a3621470a3b4c2c
-      internalID: -1447130306
+      spriteID: 4eab947a80bf19c41a2983723c70c175
+      internalID: -1131454038
       vertices: []
       indices: 
       edges: []
@@ -233,12 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      lv2_0: -992058298
-      lv2_1: 1465269936
-      lv2_2: -1242349467
-      lv2_3: -1854018012
-      lv2_4: 1104760486
-      lv2_5: -1447130306
+      LV2 part 1_0: 1420056203
+      LV2 part 1_1: -359672227
+      LV2 part 1_2: 1927086264
+      LV2 part 1_3: -1176629451
+      LV2 part 1_4: -632245160
+      LV2 part 1_5: 682076168
+      LV2 part 1_6: -112589267
+      LV2 part 1_7: -1131454038
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
