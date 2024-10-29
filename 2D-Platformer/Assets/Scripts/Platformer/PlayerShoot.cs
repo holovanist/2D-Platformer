@@ -24,7 +24,7 @@ public class PlayerShoot : MonoBehaviour
     private void Start()
     {
         xInput = 1;
-       
+        UpgradeChecker = GetComponent<UpgradeChecker>();
     }
     // Update is called once per frame
     void Update()

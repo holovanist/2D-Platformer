@@ -5,19 +5,27 @@ using UnityEngine.Rendering.Universal;
 
 public class UpgradeChecker : MonoBehaviour
 {
+
     public bool LightningSpells { get; set; }
     public bool LightningSpellsUpgrade { get; set; }
     public bool FireballUpgrade { get; set; }
     public bool MaxManaIncrease { get;  set; }
     public bool MaxHealthIncrease { get;  set; }
 
-    private readonly Shop shop;
+    Shop shop;
     GameObject Store;
+    
     // Update is called once per frame
     private void Start()
     {
-        Store = GameObject.FindGameObjectWithTag("Store");
-        GetComponent<Shop>();
+
+        GameObject shop1 = GameObject.FindWithTag("Store");
+        //Store = GameObject.FindGameObjectWithTag("Store");
+        //GetComponent<Shop>();
+        if (shop1 != null)
+        {
+            shop = shop1.GetComponent<Shop>();
+        }
     }
     void Update()
     {
