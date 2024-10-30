@@ -18,10 +18,11 @@ public class PlayerMovement : MonoBehaviour
     private float JumptimeCounter;
     public float JumpTime;
     private bool IsJumping;
-  
+    Animator anim;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
 
@@ -54,6 +55,17 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             IsJumping = false;
+        }
+        anim.SetBool("Grounded", isgrounded);
+        int x = (int)Input.GetAxisRaw("Horizontal");
+        anim.SetInteger("x", x);
+        if (x < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (x > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

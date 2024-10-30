@@ -10,12 +10,12 @@ public class PlatformerMovement : MonoBehaviour
     float JumpSpeed = 2f;
     bool grounded = false;
     Rigidbody2D rb;
-    //Animator anim;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,17 +31,17 @@ public class PlatformerMovement : MonoBehaviour
             rb.AddForce(new Vector2(0, 100 * JumpSpeed));
             grounded = false;
         }
-       // anim.SetFloat("y", velocity.y);
-       // anim.SetBool("Grounded", grounded);
-        //int x = (int)Input.GetAxisRaw("Horizontal");
-        //anim.SetInteger("x", x);
-        /*if (x > 0)
+          anim.SetFloat("y", velocity.y);
+        anim.SetBool("Grounded", grounded);
+        int x = (int)Input.GetAxisRaw("Horizontal");
+        anim.SetInteger("x", x);
+        if (x > 0)
         {
             GetComponent<SpriteRenderer>().flipX = false;
         }else if (x < 0)
         {
             GetComponent <SpriteRenderer>().flipX = true;
-        }*/
+        }
     }
     //private void OnTriggerEnter2D(Collider2D collision)
     //{
