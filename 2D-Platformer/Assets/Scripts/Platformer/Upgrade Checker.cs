@@ -13,7 +13,6 @@ public class UpgradeChecker : MonoBehaviour
     public bool MaxHealthIncrease { get;  set; }
 
     Shop shop;
-    GameObject Store;
     
     // Update is called once per frame
     private void Start()
