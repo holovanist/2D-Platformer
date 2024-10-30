@@ -8249,70 +8249,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2019792523583102182, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 2019792523583102182, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2019792523583102182, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -3894500927774121086, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 2019792523583102182, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 2019792523583102182, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2019792523583102182, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2173262168075335252, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 2173262168075335252, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -3894500927774121086, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 2173262168075335252, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2960369708561307094, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5628568770454184471, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 5628568770454184471, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -3894500927774121086, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 5628568770454184471, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5930714343913809089, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 5930714343913809089, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -3894500927774121086, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 5930714343913809089, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7782172919418331437, guid: aa27c51c3e61f48478951df0c94a3778, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -8619,17 +8555,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6516105889595117357, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6743717260428079441, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
       propertyPath: m_Name
       value: Shop
-      objectReference: {fileID: 0}
-    - target: {fileID: 6743717260428079441, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_TagString
-      value: Store
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
