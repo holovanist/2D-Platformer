@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 2374360761205006188}
   - component: {fileID: 1757101034779612133}
   - component: {fileID: 125615717179082318}
+  - component: {fileID: 238145726430469666}
   m_Layer: 0
   m_Name: player test
   m_TagString: Player
@@ -490,11 +491,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041546fcbfd4e4e43aa9ba02a36227f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7046116984928926309, guid: c5c45fd60c2e1e34e957a23cd3f92de8, type: 3}
+  FireballLv1: {fileID: 7046116984928926309, guid: c5c45fd60c2e1e34e957a23cd3f92de8, type: 3}
+  FireballLv2: {fileID: 7046116984928926309, guid: c5c45fd60c2e1e34e957a23cd3f92de8, type: 3}
   BulletSpeed: 15
   BulletLifetime: 3
   ShootDelay: 0.5
   xInput: 0
+  yInput: 0
 --- !u!114 &1757101034779612133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,6 +557,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.98792887, y: 0.051601827}
   m_EdgeRadius: 0
+--- !u!114 &238145726430469666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3977748095564257965}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c96df61490ba594ca5f8cb28320745f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4733168938651145768
 GameObject:
   m_ObjectHideFlags: 0
