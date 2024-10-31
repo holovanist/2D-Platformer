@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class EnemyPace : MonoBehaviour
@@ -13,6 +14,7 @@ public class EnemyPace : MonoBehaviour
     float paceDir = -1;
     public float paceSpeed = 4;
     Rigidbody2D rb;
+    float timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class EnemyPace : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
         Vector3 vel = rb.velocity;
         vel.x = paceDir * paceSpeed;
         rb.velocity = vel;
@@ -36,12 +39,21 @@ public class EnemyPace : MonoBehaviour
             ChaseDir.Normalize();
             rb.velocity = new Vector2(1, 0) * chaseSpeed * ChaseDir;
         }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 6)
         {
             paceDir *= -1;
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy") & timer >= 2)
+        {
+            timer = 0;
+            paceDir = -1;
         }
     }
 }
