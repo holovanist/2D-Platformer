@@ -28,22 +28,7 @@ public class UpgradeChecker : MonoBehaviour
     }
     void Update()
     {
-        if (shop.LightningSpells == true)
-        {
-            LightningSpells = true;
-        }
-        else
-        {
-
-        }
-        if (shop.LightningSpellsUpgrade == true)
-        {
-            LightningSpellsUpgrade = true;
-        }
-        else
-        {
-
-        }
+       
         if (shop.FireballUpgrade == true)
         {
             FireballUpgrade = true;

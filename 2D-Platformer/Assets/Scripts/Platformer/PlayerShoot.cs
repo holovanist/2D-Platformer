@@ -20,15 +20,25 @@ public class PlayerShoot : MonoBehaviour
     public float xInput;
     public float yInput;
     int lastInput;
+
+
+    public float Mana;
+    public float MaxMana { get; set; }
+    float RechargeDelay;
+    [SerializeField]
+    float ManaUsage;
+
     private UpgradeChecker UpgradeChecker;
     private void Start()
     {
+        Mana = MaxMana;
         xInput = 1;
         UpgradeChecker = GetComponent<UpgradeChecker>();
     }
     // Update is called once per frame
     void Update()
     {
+        
         if (UpgradeChecker.FireballUpgrade == false)
         {
             ATK();
@@ -57,7 +67,7 @@ public class PlayerShoot : MonoBehaviour
             if (Input.GetButton("Fire1") && timer > ShootDelay)
             {
                 timer = 0;
-
+                Mana -= ManaUsage;
 
                 if (yInput != 0)
                 {

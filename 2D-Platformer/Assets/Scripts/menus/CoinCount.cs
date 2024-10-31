@@ -6,17 +6,15 @@ using UnityEngine.UI;
 
 public class CoinCount : MonoBehaviour
 {
-    public int CoinAmount { get; set; }
+    public int CoinAmount;
     public TextMeshProUGUI MyText;
-    public int Score { get; set; }
-    public int MoneyAmount;
+    public int MoneyAmount { get; set; }
 
     // Use this for initialization
     void Start()
     {
-
+        MoneyAmount = 0;
         MyText.text = "";
-        Score = 0;
     }
 
 
@@ -24,8 +22,7 @@ public class CoinCount : MonoBehaviour
     void Update()
     {
 
-        MyText.text = "money " + Score;
-
+        MyText.text = "money " + MoneyAmount;
     }
 
     void OnTriggerEnter2D(Collider2D coll)
@@ -33,7 +30,7 @@ public class CoinCount : MonoBehaviour
 
         if (coll.CompareTag("Coin"))
         {
-            Score = Score + MoneyAmount;
+            MoneyAmount += CoinAmount;
         }
 
         if (coll.CompareTag("Coin"))

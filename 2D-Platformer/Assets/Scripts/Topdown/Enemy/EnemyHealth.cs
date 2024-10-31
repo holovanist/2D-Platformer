@@ -20,13 +20,10 @@ public class EnemyHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PlayerBullet")
+        if (collision.gameObject.CompareTag("PlayerBullet"))
         {
             health -= 1;
             healthbar.fillAmount = health / BaseMaxHp;

@@ -10,10 +10,10 @@ public class PlayerHealth : MonoBehaviour
     string levelToLoad = "Lose";
     [SerializeField]
     float health = 10f;
+
+    public float BaseMaxHealth { get; set; }
     [SerializeField]
-    float baseMaxHealth = 10f;
-    [SerializeField]
-    float BossDamage = 0.05f;
+    float BossDamage = 2f;
     [SerializeField]
     float EnemyDamage = 1f;
     [SerializeField]
@@ -21,9 +21,11 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     float iframes;
     float timer;
+
     void Start()
     {
-        healthbar.fillAmount = health / baseMaxHealth;
+        BaseMaxHealth = health;
+        healthbar.fillAmount = health / BaseMaxHealth;
     }
     private void Update()
     {
@@ -31,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         if (health < 1f)
         {
             SceneManager.LoadScene(levelToLoad);
-            health = baseMaxHealth;
+            health = BaseMaxHealth;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -67,12 +69,12 @@ public class PlayerHealth : MonoBehaviour
         {
             BossHit();
         }
-        if (health <= baseMaxHealth)
+        if (health <= BaseMaxHealth)
         {
             if (collision.gameObject.CompareTag("Heal"))
             {
                 health += 1f;
-                healthbar.fillAmount = health / baseMaxHealth;
+                healthbar.fillAmount = health / BaseMaxHealth;
             }
         }
         if (collision.gameObject.CompareTag("Enemy Bullet") && timer >= iframes)
@@ -95,16 +97,16 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= EnemyDamage;
         timer = 0;
-        healthbar.fillAmount = health / baseMaxHealth;
+        healthbar.fillAmount = health / BaseMaxHealth;
     }
     public void BossHit()
     {
         health -= BossDamage;
         timer = 0;
-        healthbar.fillAmount = health / baseMaxHealth;
+        healthbar.fillAmount = health / BaseMaxHealth;
     }
     private void OnLevelWasLoaded(int level)
     {
-        healthbar.fillAmount = health / baseMaxHealth;
+        healthbar.fillAmount = health / BaseMaxHealth;
     }
 }
