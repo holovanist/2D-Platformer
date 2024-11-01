@@ -22,8 +22,12 @@ public class PlayerHealth : MonoBehaviour
     float iframes;
     float timer;
 
+    int counter;
+
+    private UpgradeChecker UpgradeChecker;
     void Start()
     {
+        UpgradeChecker = GetComponent<UpgradeChecker>();
         BaseMaxHealth = health;
         healthbar.fillAmount = health / BaseMaxHealth;
     }
@@ -34,6 +38,11 @@ public class PlayerHealth : MonoBehaviour
         {
             SceneManager.LoadScene(levelToLoad);
             health = BaseMaxHealth;
+        }
+        if (UpgradeChecker.MaxHealthIncrease == true && counter < 1)
+        {
+            BaseMaxHealth *= 2;
+            counter++;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)

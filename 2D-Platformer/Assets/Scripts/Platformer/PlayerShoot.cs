@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.UI;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -15,30 +16,49 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     float BulletLifetime = 2.0f;
     float timer = 0;
+    float timer2 = 0;
     [SerializeField]
     float ShootDelay = 0.5f;
-    public float xInput;
-    public float yInput;
+    float xInput;
+    float yInput;
     int lastInput;
+    int counter;
 
 
-    public float Mana;
+    public float Mana = 10;
     public float MaxMana { get; set; }
-    float RechargeDelay;
+    [SerializeField]
+    float RechargeAmount;
     [SerializeField]
     float ManaUsage;
+
+    [SerializeField]
+    Image Manabar;
 
     private UpgradeChecker UpgradeChecker;
     private void Start()
     {
-        Mana = MaxMana;
+        MaxMana = Mana;
         xInput = 1;
         UpgradeChecker = GetComponent<UpgradeChecker>();
+        Manabar.fillAmount = Mana / MaxMana;
     }
     // Update is called once per frame
     void Update()
     {
-        
+        timer2 += Time.deltaTime;
+        if (Mana <= 10 && timer2 >= 2 || timer >= 15 && Mana != MaxMana)
+        {
+            timer2 = 0;
+            
+            Mana += RechargeAmount;
+            Manabar.fillAmount = Mana / MaxMana;
+        }
+        if (UpgradeChecker.MaxManaIncrease == true && counter <1)
+        {
+            MaxMana *= 2;
+            counter++;
+        }
         if (UpgradeChecker.FireballUpgrade == false)
         {
             ATK();
@@ -57,6 +77,7 @@ public class PlayerShoot : MonoBehaviour
         {
             lastInput = -1;
         }
+        
     }
     public void ATK()
     {
@@ -64,43 +85,26 @@ public class PlayerShoot : MonoBehaviour
         if (Time.timeScale == 1)
         {
             timer += Time.deltaTime; 
-            if (Input.GetButton("Fire1") && timer > ShootDelay)
+            if (Input.GetButton("Fire1") && timer > ShootDelay && Mana >= 1)
             {
                 timer = 0;
                 Mana -= ManaUsage;
+                Manabar.fillAmount = Mana / MaxMana;
 
                 if (yInput != 0)
                 {
-                    if (yInput == 1)
-                    {
                         GameObject bullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
                         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0 , yInput) * BulletSpeed;
                         Destroy(bullet, BulletLifetime);
-                    }
-                    if (yInput == -1)
-                    {
-                        GameObject bullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
-                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, yInput) * BulletSpeed;
-                        Destroy(bullet, BulletLifetime);
-                    }
                 }
 
                 else if (xInput != 0)
                 {
-                    if (xInput == 1)
-                    {
                         GameObject bullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
                         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0) * BulletSpeed;
                         Destroy(bullet, BulletLifetime);
-                    }
-                    if (xInput == -1)
-                    {
-                        GameObject bullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
-                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0) * BulletSpeed;
-                        Destroy(bullet, BulletLifetime);
-                    }
                 }
-                else
+                else if (xInput == 0)
                 {
                     GameObject bullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
                     bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(lastInput, 0) * BulletSpeed;
@@ -111,70 +115,36 @@ public class PlayerShoot : MonoBehaviour
     }
     public void ATK2()
     {
+        yInput = Input.GetAxisRaw("Vertical");
         xInput = Input.GetAxisRaw("Horizontal");
-        if (xInput == 1)
-        {
-            lastInput = 1;
-        }
-        if (xInput == -1)
-        {
-            lastInput = -1;
-        }
         if (Time.timeScale == 1)
         {
             timer += Time.deltaTime;
             if (Input.GetButton("Fire1") && timer > ShootDelay)
             {
                 timer = 0;
+                Mana -= ManaUsage;
+                Manabar.fillAmount = Mana / MaxMana;
 
-
-                if (xInput != 0)
+                if (yInput != 0)
                 {
-                    if (xInput == 1)
-                    {
-                        GameObject bullet = Instantiate(FireballLv2, transform.position, Quaternion.identity);
-                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0) * BulletSpeed;
-                        Destroy(bullet, BulletLifetime);
-                    }
-                    if (xInput == -1)
-                    {
-                        GameObject bullet = Instantiate(FireballLv2, transform.position, Quaternion.identity);
-                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0) * BulletSpeed;
-                        Destroy(bullet, BulletLifetime);
-                    }
+                    GameObject bullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, yInput) * BulletSpeed;
+                    Destroy(bullet, BulletLifetime);
                 }
-                else
+                else if (xInput != 0)
                 {
                     GameObject bullet = Instantiate(FireballLv2, transform.position, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, 0) * BulletSpeed;
+                    Destroy(bullet, BulletLifetime);
+                }
+                else if (xInput == 0)
+                {
+                    GameObject bullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
                     bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(lastInput, 0) * BulletSpeed;
                     Destroy(bullet, BulletLifetime);
                 }
             }
         }
-        yInput = Input.GetAxisRaw("Vertical");
-        if (Time.timeScale == 1)
-        {
-              timer += Time.deltaTime;
-            if (Input.GetButton("Fire1") && timer > ShootDelay)
-            {
-                timer = 0;
-                if (yInput != 0)
-                {
-                    if (yInput == 1)
-                    {
-                        GameObject bullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
-                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, yInput) * BulletSpeed;
-                        Destroy(bullet, BulletLifetime);
-                    }
-                    if (yInput == -1)
-                    {
-                        GameObject bullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
-                        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, yInput) * BulletSpeed;
-                        Destroy(bullet, BulletLifetime);
-                    }
-                }
-            }
-        }
     }
-
 }
