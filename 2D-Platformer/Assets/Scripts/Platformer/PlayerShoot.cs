@@ -47,7 +47,7 @@ public class PlayerShoot : MonoBehaviour
     void Update()
     {
         timer2 += Time.deltaTime;
-        if (Mana <= 10 && timer2 >= 2 || timer >= 15 && Mana != MaxMana)
+        if (Mana <= 10 && timer2 >= 2)
         {
             timer2 = 0;
             
