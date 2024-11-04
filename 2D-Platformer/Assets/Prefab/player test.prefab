@@ -1068,56 +1068,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1807899599091780594}
     m_Modifications:
-    - target: {fileID: 266179560439729991, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: Cost3
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 266179560439729991, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: Cost4
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 266179560439729991, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: Cost5
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 407375205339998850, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 467024341664364085, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 1209272551776305639, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_TagString
-      value: Shop 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1925389193704376883, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_text
-      value: 'Fireball Upgrade
-
-        Purchase'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1925389193704376883, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 1925389193704376883, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -3894500927774121086, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 2581441209151970196, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Purchase4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3233988253075374981, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 5611197540116543431, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Purchase5
-      objectReference: {fileID: 0}
     - target: {fileID: 5968207785709354180, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1198,58 +1148,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6102010215007191493, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Purchase3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6516105889595117357, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573818709780364763, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_text
-      value: 'Mana Upgrade
-
-        Purchase'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573818709780364763, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 6573818709780364763, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -3894500927774121086, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
     - target: {fileID: 6743717260428079441, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
       propertyPath: m_Name
       value: Shop
       objectReference: {fileID: 0}
-    - target: {fileID: 6995006171897484050, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_TagString
-      value: Shop 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618929448327274544, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_text
-      value: 'Health Upgrade
-
-        Purchase'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618929448327274544, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 8618929448327274544, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -3894500927774121086, guid: 3d42bd75a7d7cde4f8e8899c81d047cb, type: 2}
-    - target: {fileID: 9110460936919658888, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-      propertyPath: m_TagString
-      value: Shop 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 6227468904185814540, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
-    - {fileID: 1323783189404118160, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e9ace4b1092d8f49a758467c53b68fe, type: 3}
