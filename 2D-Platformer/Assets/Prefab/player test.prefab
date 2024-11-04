@@ -573,6 +573,7 @@ MonoBehaviour:
   BulletSpeed: 15
   BulletLifetime: 3
   ShootDelay: 0.5
+  lastInput: 0
   Mana: 10
   RechargeAmount: 1
   ManaUsage: 1

@@ -8818,6 +8818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 9177165984253412504, guid: e0de3754f4101084991c3d9db9f2e7f7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9289,17 +9293,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3207348767823555707, guid: 6d47f1313f66c664e8fe685c1b3c3327, type: 3}
-      propertyPath: m_ClearFlags
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3977748095564257965, guid: 6d47f1313f66c664e8fe685c1b3c3327, type: 3}
       propertyPath: m_Name
       value: player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5580680608100006291, guid: 6d47f1313f66c664e8fe685c1b3c3327, type: 3}
-      propertyPath: m_CameraType
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

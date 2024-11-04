@@ -39,15 +39,15 @@ public class PlayerShoot : MonoBehaviour
     private void Start()
     {
         MaxMana = Mana;
-        xInput = 1;
         UpgradeChecker = GetComponent<UpgradeChecker>();
         Manabar.fillAmount = Mana / MaxMana;
+        lastInput = -1;
     }
     // Update is called once per frame
     void Update()
     {
         timer2 += Time.deltaTime;
-        if (Mana <= 10 && timer2 >= 2)
+        if (Mana <= MaxMana && timer2 >= 2)
         {
             timer2 = 0;
             
