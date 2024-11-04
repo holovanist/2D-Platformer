@@ -12,6 +12,10 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     GameObject FireballLv2;
     [SerializeField]
+    GameObject FireballLv1Y;
+    [SerializeField]
+    GameObject FireballLv2Y;
+    [SerializeField]
     float BulletSpeed = 1.0f;
     [SerializeField]
     float BulletLifetime = 2.0f;
@@ -22,6 +26,7 @@ public class PlayerShoot : MonoBehaviour
     float xInput;
     float yInput;
     public int lastInput;
+    public int lastInputY;
     int counter;
 
 
@@ -77,7 +82,15 @@ public class PlayerShoot : MonoBehaviour
         {
             lastInput = -1;
         }
-        
+        if (yInput == 1)
+        {
+            lastInputY = 1;
+        }
+        if (yInput == -1)
+        {
+            lastInputY = -1;
+        }
+
     }
     public void ATK()
     {
@@ -93,9 +106,13 @@ public class PlayerShoot : MonoBehaviour
 
                 if (yInput != 0)
                 {
-                        GameObject ybullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
+                        GameObject ybullet = Instantiate(FireballLv1Y, transform.position, Quaternion.identity);
                         ybullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0 , yInput) * BulletSpeed;
                         Destroy(ybullet, BulletLifetime);
+                    if (lastInputY < 0 || yInput < 0)
+                    {
+                        ybullet.GetComponent<SpriteRenderer>().flipY = true;
+                    }
                 }
 
                 else if (xInput != 0)
@@ -136,9 +153,13 @@ public class PlayerShoot : MonoBehaviour
 
                 if (yInput != 0)
                 {
-                    GameObject ybullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
+                    GameObject ybullet = Instantiate(FireballLv2Y, transform.position, Quaternion.identity);
                     ybullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, yInput) * BulletSpeed;
                     Destroy(ybullet, BulletLifetime);
+                    if (lastInputY < 0 || yInput < 0)
+                    {
+                        ybullet.GetComponent<SpriteRenderer>().flipY = true;
+                    }
                 }
                 else if (xInput != 0)
                 {
@@ -152,7 +173,7 @@ public class PlayerShoot : MonoBehaviour
                 }
                 else if (xInput == 0)
                 {
-                    GameObject xbullet = Instantiate(FireballLv1, transform.position, Quaternion.identity);
+                    GameObject xbullet = Instantiate(FireballLv2, transform.position, Quaternion.identity);
                     xbullet.GetComponent<Rigidbody2D>().velocity = new Vector2(lastInput, 0) * BulletSpeed;
                     if (lastInput < 0 || xInput < 0)
                     {

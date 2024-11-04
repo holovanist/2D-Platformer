@@ -19,6 +19,7 @@ TagManager:
   - menu
   - Coin
   - Heal
+  - PlayerBullet2
   layers:
   - Default
   - TransparentFX

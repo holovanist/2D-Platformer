@@ -407,12 +407,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2040459392, guid: bfd0a35357010174fb4b128d4b25f5ef, type: 3}
+  m_Sprite: {fileID: -2040459392, guid: fa396c28936a664459055f33df5ded30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -482,7 +482,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -569,11 +569,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireballLv1: {fileID: 7046116984928926309, guid: c5c45fd60c2e1e34e957a23cd3f92de8, type: 3}
-  FireballLv2: {fileID: 7046116984928926309, guid: c5c45fd60c2e1e34e957a23cd3f92de8, type: 3}
+  FireballLv2: {fileID: 7046116984928926309, guid: aa924dac05cc904458ad1f9b6b196aed, type: 3}
+  FireballLv1Y: {fileID: 7046116984928926309, guid: 5e523afc614a7914b95c3d8dacfbf5f7, type: 3}
+  FireballLv2Y: {fileID: 7046116984928926309, guid: f082498f64cc757409dcd4d5443dadca, type: 3}
   BulletSpeed: 15
   BulletLifetime: 3
   ShootDelay: 0.5
   lastInput: 0
+  lastInputY: 0
   Mana: 10
   RechargeAmount: 1
   ManaUsage: 1
@@ -629,7 +632,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
