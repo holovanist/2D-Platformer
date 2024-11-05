@@ -86,10 +86,10 @@ GameObject:
   - component: {fileID: 4271674189785127478}
   - component: {fileID: 9177165984253412504}
   - component: {fileID: 8305293870646409713}
-  - component: {fileID: 170898375468842557}
   - component: {fileID: 2524125568881758068}
   - component: {fileID: 8207067533673110281}
-  - component: {fileID: 4704550187641685238}
+  - component: {fileID: 3095270040599637360}
+  - component: {fileID: 8791599728090272831}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -154,8 +154,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.6509434, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 2047124347, guid: d46a2570722753145947c1ed13a52f30, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -192,8 +192,37 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &170898375468842557
-CapsuleCollider2D:
+--- !u!114 &2524125568881758068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7602108398324064621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f081bed2869022409a7fcaa47409f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseSpeed: 7
+  ChaseRange: 10
+  goHome: 1
+--- !u!114 &8207067533673110281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7602108398324064621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2edddc95c9bf6de40ad088ae543c1950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  BaseMaxHp: 3
+--- !u!61 &3095270040599637360
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -224,55 +253,40 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
---- !u!114 &2524125568881758068
-MonoBehaviour:
+  m_Offset: {x: -0.009487152, y: 0.041110992}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.63949585, y: 0.69008636}
+  m_EdgeRadius: 0
+--- !u!95 &8791599728090272831
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7602108398324064621}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f081bed2869022409a7fcaa47409f1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseSpeed: 7
-  ChaseRange: 10
-  goHome: 1
---- !u!114 &8207067533673110281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7602108398324064621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2edddc95c9bf6de40ad088ae543c1950, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  BaseMaxHp: 5
---- !u!114 &4704550187641685238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7602108398324064621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3bdbdf98b2aad148bde7129bc3cfc78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 7046116984928926309, guid: 4c66d2dd702b64542b437278af090660, type: 3}
-  BulletSpeed: 10
-  BulletLifetime: 2
-  ShootDelay: 0.5
-  shootDistance: 10
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5e04465ba070d0468af729b916026e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7770822072923325424
 GameObject:
   m_ObjectHideFlags: 0
