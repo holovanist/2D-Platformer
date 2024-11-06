@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
         timer += Time.deltaTime;
         if (health < 1f)
         {
-            SceneManager.LoadScene(levelToLoad);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             health = BaseMaxHealth;
         }
         if (UpgradeChecker.MaxHealthIncrease == true && counter < 1)

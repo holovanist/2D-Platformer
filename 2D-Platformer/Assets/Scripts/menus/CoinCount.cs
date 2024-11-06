@@ -13,7 +13,6 @@ public class CoinCount : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        MoneyAmount = 0;
         MyText.text = "";
     }
 
