@@ -70,7 +70,7 @@ public class PlayerShoot : MonoBehaviour
         } 
         else if (UpgradeChecker.FireballUpgrade == true)
         {   
-            ATK();
+            ATK2();
         }
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");

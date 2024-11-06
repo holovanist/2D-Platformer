@@ -32,5 +32,14 @@ public class EnemyHealth : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if (collision.gameObject.CompareTag("PlayerBullet2"))
+        {
+            health -= 2;
+            healthbar.fillAmount = health / BaseMaxHp;
+            if (health < .2f)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

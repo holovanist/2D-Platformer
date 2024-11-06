@@ -16,10 +16,12 @@ public class EnemyShoot : MonoBehaviour
     GameObject Player;
     [SerializeField]
     float shootDistance = 5f;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,6 +42,15 @@ public class EnemyShoot : MonoBehaviour
             //shoot towards the player
             timer = 0;
             Destroy(bullet, BulletLifetime);
+            anim.SetBool("shoot", true);
+        } else
+        {
+            anim.SetBool("shoot", false);
         }
+        
+    }
+    private void OnLevelWasLoaded(int level)
+    {
+        anim = GetComponent<Animator>();
     }
 }

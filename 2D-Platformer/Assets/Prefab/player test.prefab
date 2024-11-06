@@ -554,7 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: Logan 2
   health: 10
-  BossDamage: 0.05
+  BossDamage: 2
   EnemyDamage: 1
   healthbar: {fileID: 3850409001825803407}
   iframes: 1

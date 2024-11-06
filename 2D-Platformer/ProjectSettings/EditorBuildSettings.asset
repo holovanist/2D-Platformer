@@ -24,9 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/level 4 beta.unity
     guid: 1738b3493d7a5de48882a2eedb53fb10
   - enabled: 1
-    path: Assets/Scenes/Level 4 interior.unity
+    path: Assets/Scenes/Level 4 beta.unity
     guid: 94bfc2e63f6644b49bef43cab0aeb73f
   - enabled: 1
-    path: Assets/Scenes/Level 5 boss beta.unity
+    path: Assets/Scenes/Level 5.unity
     guid: 8407dfccde97a1c458269c2f8c4e5722
   m_configObjects: {}
