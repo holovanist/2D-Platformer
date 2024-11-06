@@ -9,9 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: b9e27982f198d954e85ef874b373aeac
   - enabled: 1
-    path: Assets/Scenes/Logan 2.unity
-    guid: 841f12a245700bc45ac84044e958cd1c
+    path: Assets/Scenes/level 1 beta.unity
+    guid: 963433977f2b8b54c96d0a24f75c452c
   - enabled: 1
-    path: Assets/Scenes/Logan Jonson.unity
-    guid: 90c2e951e11556c47874a4238960f71f
+    path: Assets/Scenes/Level 2 beta.unity
+    guid: 676ee63c982885544bcbafe3136cf422
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 8daf8ab9b8787d9409eb532a27f627d2
+  - enabled: 1
+    path: Assets/Scenes/Level 3 beta.unity
+    guid: d4f7b8b0ca70b8a4da00a01d6900fcf0
+  - enabled: 1
+    path: Assets/Scenes/level 4 beta.unity
+    guid: 1738b3493d7a5de48882a2eedb53fb10
+  - enabled: 1
+    path: Assets/Scenes/Level 4 interior.unity
+    guid: 94bfc2e63f6644b49bef43cab0aeb73f
+  - enabled: 1
+    path: Assets/Scenes/Level 5 boss beta.unity
+    guid: 8407dfccde97a1c458269c2f8c4e5722
   m_configObjects: {}

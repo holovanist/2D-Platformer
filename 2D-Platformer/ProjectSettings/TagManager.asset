@@ -20,6 +20,7 @@ TagManager:
   - Coin
   - Heal
   - PlayerBullet2
+  - gem
   layers:
   - Default
   - TransparentFX

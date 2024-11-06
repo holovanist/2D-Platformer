@@ -116,6 +116,7 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnLevelWasLoaded(int level)
     {
+        health = BaseMaxHealth;
         healthbar.fillAmount = health / BaseMaxHealth;
     }
 }

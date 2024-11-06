@@ -15,11 +15,13 @@ public class EnemyPace : MonoBehaviour
     public float paceSpeed = 4;
     Rigidbody2D rb;
     float timer;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,7 +41,14 @@ public class EnemyPace : MonoBehaviour
             ChaseDir.Normalize();
             rb.velocity = new Vector2(1, 0) * chaseSpeed * ChaseDir;
         }
-
+        if (paceDir > 0)
+        {
+            anim.SetInteger("move",1);
+        }
+        if (paceDir < 0)
+        {
+            anim.SetInteger("move", -1);
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -54,6 +63,20 @@ public class EnemyPace : MonoBehaviour
         {
             timer = 0;
             paceDir = -1;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            anim.SetFloat("atk", 2);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            anim.SetFloat("atk", 0);
         }
     }
 }
