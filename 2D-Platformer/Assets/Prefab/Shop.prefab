@@ -348,7 +348,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 266179560439729991}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
         m_MethodName: Purchase4
         m_Mode: 1
@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 6516105889595117357}
   - component: {fileID: 3176180406655524122}
   - component: {fileID: 4991461052212566083}
-  - component: {fileID: 266179560439729991}
+  - component: {fileID: 9024962333595088363}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Store
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &266179560439729991
+--- !u!114 &9024962333595088363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -972,12 +972,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 6743717260428079441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 798a24193ac54fc47b8a527f09a5e0df, type: 3}
+  m_Script: {fileID: 11500000, guid: c78f5086cd438cd488ef580d029039fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost3: 0
-  Cost4: 0
-  Cost5: 0
+  item1Purchased: 0
+  item2Purchased: 0
+  item3Purchased: 0
+  item1Button: {fileID: 6102010215007191493}
+  item2Button: {fileID: 2581441209151970196}
+  item3Button: {fileID: 5611197540116543431}
+  statusText: {fileID: 0}
 --- !u!1 &6772868773395219994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,7 +1180,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 266179560439729991}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
         m_MethodName: Purchase5
         m_Mode: 1
@@ -1447,7 +1451,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 266179560439729991}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
         m_MethodName: Purchase3
         m_Mode: 1

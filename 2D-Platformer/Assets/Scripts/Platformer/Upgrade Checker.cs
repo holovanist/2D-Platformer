@@ -12,8 +12,8 @@ public class UpgradeChecker : MonoBehaviour
     public bool MaxManaIncrease { get;  set; }
     public bool MaxHealthIncrease { get;  set; }
 
-    Shop shop;
-    
+    ShopManager ShopManager;
+
     // Update is called once per frame
     private void Start()
     {
@@ -23,13 +23,13 @@ public class UpgradeChecker : MonoBehaviour
         //GetComponent<Shop>();
         if (shop1 != null)
         {
-            shop = shop1.GetComponent<Shop>();
+            ShopManager = shop1.GetComponent<ShopManager>();
         }
     }
     void Update()
     {
        
-        if (shop.FireballUpgrade == true)
+        if (ShopManager.item3Purchased == true)
         {
             FireballUpgrade = true;
         }
@@ -37,7 +37,7 @@ public class UpgradeChecker : MonoBehaviour
         {
 
         }
-        if(shop.MaxManaIncrease == true) 
+        if(ShopManager.item2Purchased == true) 
         {
             MaxManaIncrease = true;
         }
@@ -45,11 +45,11 @@ public class UpgradeChecker : MonoBehaviour
         {
 
         }
-        if(shop.MaxHealthIncrease == true)
+        if(ShopManager.item3Purchased == true)
         {
             MaxHealthIncrease = true;
         }
-        else if (shop.MaxHealthIncrease == false) 
+        else if (ShopManager.item3Purchased == false) 
         {
 
         }
