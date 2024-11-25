@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 2581441209151970196}
   m_Layer: 5
   m_Name: Button (2)
-  m_TagString: Shop 4
+  m_TagString: Shop 3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1071,7 +1071,7 @@ GameObject:
   - component: {fileID: 5611197540116543431}
   m_Layer: 5
   m_Name: Button (3)
-  m_TagString: Shop 5
+  m_TagString: Shop 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1342,7 +1342,7 @@ GameObject:
   - component: {fileID: 6102010215007191493}
   m_Layer: 5
   m_Name: Button (1)
-  m_TagString: Shop 3
+  m_TagString: Shop 5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

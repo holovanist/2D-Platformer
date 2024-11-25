@@ -88,5 +88,17 @@ public class ShopManager : MonoBehaviour
         item1Button.interactable = !item1Purchased;
         item2Button.interactable = !item2Purchased;
         item3Button.interactable = !item3Purchased;
+
+    }
+    private void OnLevelWasLoaded(int level)
+    {
+        if (GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            GetComponent<Canvas>().enabled = false;
+        }
+        else
+        {
+            GetComponent<Canvas>().enabled = true;
+        }
     }
 }

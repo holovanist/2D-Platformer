@@ -29,7 +29,7 @@ public class UpgradeChecker : MonoBehaviour
     void Update()
     {
        
-        if (ShopManager.item3Purchased == true)
+        if (ShopManager.item2Purchased == true)
         {
             FireballUpgrade = true;
         }
@@ -37,7 +37,7 @@ public class UpgradeChecker : MonoBehaviour
         {
 
         }
-        if(ShopManager.item2Purchased == true) 
+        if(ShopManager.item3Purchased == true) 
         {
             MaxManaIncrease = true;
         }
@@ -45,11 +45,11 @@ public class UpgradeChecker : MonoBehaviour
         {
 
         }
-        if(ShopManager.item3Purchased == true)
+        if(ShopManager.item1Purchased == true)
         {
             MaxHealthIncrease = true;
         }
-        else if (ShopManager.item3Purchased == false) 
+        else if (ShopManager.item1Purchased == false) 
         {
 
         }
